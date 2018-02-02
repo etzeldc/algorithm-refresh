@@ -61,7 +61,19 @@
         [1,1,2,3,1,2,3] -> [1,2,3]
         [1,4,4,4,2,2,4,4,4] -> [1,4,2]
 -->
-
+<script>
+    function noDupes(arr4) {
+        var newArr4 = [];
+        for (var i = 0; i < arr4.length; i++) {
+            if (newArr4.indexOf(arr4[i]) === -1) {
+                newArr4.push(arr4[i]);
+            }
+        }
+        return newArr4;
+    }
+    console.log(noDupes([1,1,2,3,1,2,3]));
+    console.log(noDupes([1,4,4,4,2,2,4,4,4]));
+</script>
 <!--
 5. Write function that translates a text to Pig Latin, and another that translates back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding "ay". (remember 
 
