@@ -107,8 +107,8 @@
         }
         return newArr7;
     }
-    console.log(maxValue([1,2,3,4,5,6,7,8], 4));
-    console.log(maxValue([1,5,7,3,1,5,7], 3));
+    // console.log(maxValue([1,2,3,4,5,6,7,8], 4));
+    // console.log(maxValue([1,5,7,3,1,5,7], 3));
 </script>
 <!--
 8. Write a function which takes no input and returns an array of 10 distinct randomly generated integers between 1 and 100.
@@ -140,7 +140,18 @@
 
         (Source: https://adriann.github.io/programming_problems.html)
 -->
-
+<script>
+    function newSort(arr9A, arr9B) {
+        var newArr9 = arr9A.concat(arr9B);
+        newArr9.sort(function(a, b) {
+            return a - b;
+        });
+        return newArr9;        
+    }
+    console.log(newSort([1,2,5,6,9], [3,4,5,10]));
+    console.log(newSort([], []));
+    console.log(newSort([-1, 0, 1], [-2, 2]));
+</script>
 <!--
 10. Write a function which, given an array, determines the subarray with the largest sum.
 
