@@ -14,7 +14,27 @@
         [1] -> 1
 -->
 <script>
-
+    function mode(arr1) {
+        var counts = [];
+        var maxCount = 1;
+        var mode = arr1[0];
+        for (var i = 0; i < arr1.length; i++) {
+            if (counts[arr1[i]] === undefined) {
+                counts[arr1[i]] = 0;
+            }
+            counts[arr1[i]] = counts[arr1[i]] + 1;
+        }
+        for (var j = 0; j < counts.length; j++) {
+            if (counts[j] > maxCount) {
+                maxCount = counts[j];
+                mode = j;
+            }
+        }
+        return mode;
+    }
+    // console.log(mode([2, 4, 4, 4, 6, 6, 1]));
+    // console.log(mode([0, 0, 0, 10]));
+    // console.log(mode([1]));
 </script>
 <!--
 2. Write a function which, given a year as a number, returns whether that number is a leap year.
