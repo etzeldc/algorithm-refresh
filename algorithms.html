@@ -105,7 +105,28 @@
 
         (source: https://adriann.github.io/programming_problems.html)
 -->
- 
+<script>
+    function pigLatin (str5A) {
+        var arr5 = str5A.toLowerCase().split(" ");
+        for (var i = 0; i < arr5.length; i++) {
+            // vowels
+            if (arr5[i].charAt(0) === "a" || arr5[i].charAt(0) === "e" || arr5[i].charAt(0) === "i" || arr5[i].charAt(0) === "o" || arr5[i].charAt(0) === "u") {
+                arr5[i] = arr5[i] + "whay";
+            // th, ch, sh rules
+            } else if (arr5[i].charAt(1) === "h") {
+                arr5[i] = arr5[i].slice(2, arr5[i].length + 1) + arr5[i].charAt(0) + "hay";
+            // qu rules
+            } else if (arr5[i].startsWith("qu") === true) {
+                arr5[i] = arr5[i].slice(2, arr5[i].length + 1) + "quay";
+            // the rest
+            } else {
+                arr5[i] = arr5[i].slice(1, arr5[i].length + 1) + arr5[i].charAt(0) + "ay"
+            }
+        };
+        console.log(arr5);
+    };
+    pigLatin("The quick brown fox");
+</script>
 <!--
 6. Write a function which takes in two arrays and determines if they contain the same number
    of the same values.
