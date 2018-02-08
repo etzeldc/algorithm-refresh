@@ -149,15 +149,15 @@
         }
         return arr5.join(' ');
     }
-    console.log(swine('The quick brown fox'));
+    // console.log(swine('The quick brown fox'));
 
-    function unSwine(str5) {
-        var arr5 = str5.toLowerCase().split(" ");
-        for () {
+    // function unSwine(str5) {
+    //     var arr5 = str5.toLowerCase().split(" ");
+    //     for () {
 
-        }
-        return arr5.join(' ');
-    }
+    //     }
+    //     return arr5.join(' ');
+    // }
 </script>
 <!--
 6. Write a function which takes in two arrays and determines if they contain the same number
@@ -168,22 +168,22 @@
         [1, 1, 1], [1, 1, 1, 1] -> false
 -->
 <script>
-    // function hasSame(arr6A, arr6B) {
-    //     if (arr6A.length !== arr6B.length) {
-    //         return false;
-    //     }
-    //     for (var i = 0; i < arr6A.length; i++) {
-    //         for (var j = 0; j < arr6B.length; j++) {
-    //             if (arr6A[i] === arr6B[j]) {
-    //                 return true;
-    //             }
-    //         }
-    //     }
-    // }
+    function hasSame(arr6A, arr6B) {
+        if (arr6A.length !== arr6B.length) {
+            return false;
+        }
+        for (var i = 0; i < arr6A.length; i++) {
+            for (var j = 0; j < arr6B.length; j++) {
+                if (arr6A[i] === arr6B[j]) {
+                    return true;
+                }
+            }
+        }
+    }
+    // console.log(hasSame([], []));
     // console.log(hasSame([2, 3, 4], [1, 2, 3]));
     // console.log(hasSame(["a", "c", "b"], ["a", "b", "c"]));
     // console.log(hasSame([1, 1, 1], [1, 1, 1, 1]));
-    // console.log(hasSame([], []));
 </script>
 <!--
 7. Write a function which takes in an array of numbers and a max cutoff value, and returns a 
